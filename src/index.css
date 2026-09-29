@@ -1,5 +1,42 @@
 @import "tailwindcss";
 
+@theme {
+  --color-base-alt: #0f0f0f;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --name-lightness: 65%;
+  --name-glow: rgba(0, 0, 0, 0.5);
+}
+
+/* Light theme: flips the neutral scale and white, and darkens the accents so they stay readable on a light background. */
+html.light {
+  color-scheme: light;
+  --color-white: oklch(20% 0 none);
+  --color-neutral-950: oklch(98.5% 0 none);
+  --color-base-alt: oklch(95.5% 0.004 180);
+  --color-neutral-800: oklch(92.2% 0 none);
+  --color-neutral-400: oklch(45% 0 none);
+  --color-neutral-300: oklch(37% 0 none);
+  --color-neutral-200: oklch(27% 0 none);
+
+  --color-emerald-300: oklch(50.8% 0.118 165.612);
+  --color-emerald-400: oklch(59.6% 0.145 163.225);
+  --color-cyan-300: oklch(52% 0.105 223.128);
+  --color-cyan-400: oklch(60.9% 0.126 221.723);
+  --color-teal-300: oklch(51.1% 0.096 186.391);
+
+  --name-lightness: 45%;
+  --name-glow: rgba(0, 0, 0, 0.15);
+}
+
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html.theme-transition,
+html.theme-transition * {
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease !important;
 }
