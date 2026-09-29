@@ -37,7 +37,7 @@ const personalProjects = [
     tags: ["React", "Tailwind", "Framer Motion"],
     image: null,
     github: "https://github.com/BenjaminQueupil/MyPortafolio",
-    demo: "",
+    demo: "https://benjamin-queupil.vercel.app",
   },
 ];
 
