@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import { scrollToSection } from "../scrollToSection";
 
 const links = [
   { href: "#home", label: "Inicio" },
@@ -30,6 +31,7 @@ export default function Navbar() {
           <motion.a
             key={link.href}
             href={link.href}
+            onClick={(e) => scrollToSection(e, link.href)}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 * i, duration: 0.4 }}
@@ -82,7 +84,10 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setOpen(false)}
+                onClick={(e) => {
+                  setOpen(false);
+                  scrollToSection(e, link.href);
+                }}
                 className="px-4 py-2.5 text-sm font-medium text-neutral-300 rounded-xl hover:bg-emerald-500/20 hover:text-cyan-300 transition-colors"
               >
                 {link.label}

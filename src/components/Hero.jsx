@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import fotoPerfil from "../assets/foto-perfil.jpg";
+import { scrollToSection } from "../scrollToSection";
 
 const NAME = "Benjamin Queupil";
 
@@ -128,6 +129,7 @@ export default function Hero() {
       >
         <motion.a
           href="#projects"
+          onClick={(e) => scrollToSection(e, "#projects")}
           whileHover={{ scale: 1.06 }}
           whileTap={{ scale: 0.96 }}
           className="px-6 py-3 rounded-full text-neutral-950 font-semibold bg-gradient-to-r from-emerald-400 to-cyan-400 shadow-lg shadow-cyan-500/30"
