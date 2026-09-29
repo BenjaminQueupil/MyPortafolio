@@ -24,7 +24,7 @@ const personalProjects = [
   {
     title: "Noagh Barber",
     description:
-      "Sistema de gestión de turnos para barbería, con React, Tailwind y Supabase como backend. Publicado en Vercel.",
+      "Sitio web para una barbería con reserva de horas online: el cliente elige servicio, barbero y horario, y el local administra su agenda, clientes y servicios desde un panel propio.",
     tags: ["React", "Tailwind", "Supabase", "Vercel"],
     image: imgNoagh,
     github: "",
@@ -33,7 +33,7 @@ const personalProjects = [
   {
     title: "Portafolio Personal",
     description:
-      "Sitio personal construido con React, Tailwind CSS y Framer Motion para presentar mis proyectos y stack.",
+      "Mi sitio personal para presentar mi experiencia, proyectos y habilidades, con animaciones interactivas y tema claro/oscuro.",
     tags: ["React", "Tailwind", "Framer Motion"],
     image: null,
     github: "https://github.com/BenjaminQueupil/MyPortafolio",

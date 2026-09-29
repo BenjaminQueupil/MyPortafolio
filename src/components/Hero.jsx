@@ -85,10 +85,10 @@ export default function Hero() {
           onMouseMove={handleMove}
           onMouseLeave={handleLeave}
           style={{ rotateX, rotateY }}
-          className="relative w-65 sm:w-72 aspect-[4/5] sm:aspect-[3/4] rounded-3xl p-[3px] overflow-hidden shadow-2xl shadow-cyan-500/25"
+          className="relative w-65 sm:w-72 aspect-[4/5] sm:aspect-[3/4] rounded-3xl p-1 overflow-hidden isolate [-webkit-mask-image:-webkit-radial-gradient(white,black)] bg-white/10 shadow-2xl shadow-cyan-500/30"
         >
-          <div className="absolute inset-[-50%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_0deg,#34d399,#22d3ee,#2dd4bf,#22d3ee,#34d399)]" />
-          <div className="relative w-full h-full rounded-[1.3rem] overflow-hidden bg-base-alt">
+          <div className="absolute inset-[-50%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,#34d399_30%,#22d3ee_45%,#ecfeff_50%,transparent_50%,#34d399_80%,#22d3ee_95%,#ecfeff_100%)]" />
+          <div className="relative w-full h-full rounded-[1.25rem] overflow-hidden bg-base-alt">
             <img
               src={fotoPerfil}
               alt="Benjamin Queupil"
