@@ -105,7 +105,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="block text-xl sm:text-2xl font-medium text-neutral-300"
         >
-          Holi, yo soy
+          Hola yo soy
         </motion.span>
         <span className="text-4xl sm:text-6xl">
           <Name3D />
