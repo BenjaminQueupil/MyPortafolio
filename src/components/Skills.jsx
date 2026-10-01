@@ -103,7 +103,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative flex flex-col items-center justify-center px-4 py-16 sm:py-20 overflow-hidden bg-base-alt"
+      className="relative flex flex-col items-center justify-center px-4 py-16 sm:py-20 overflow-hidden bg-neutral-950"
     >
       <motion.div
         className="hidden sm:block pointer-events-none absolute -z-10 top-0 right-1/4 w-[30rem] h-[30rem] rounded-full bg-cyan-500/15 blur-3xl"

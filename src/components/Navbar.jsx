@@ -7,10 +7,10 @@ import { scrollToSection } from "../scrollToSection";
 const links = [
   { href: "#home", label: "Inicio" },
   { href: "#about", label: "Sobre mí" },
-  { href: "#skills", label: "Habilidades" },
   { href: "#experience", label: "Experiencia" },
   { href: "#projects", label: "Proyectos" },
   { href: "#contact", label: "Contacto" },
+  { href: "#skills", label: "Habilidades" },
 ];
 
 export default function Navbar() {

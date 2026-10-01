@@ -135,7 +135,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="relative flex flex-col items-center justify-center px-4 py-16 sm:py-20 overflow-hidden bg-neutral-950"
+      className="relative flex flex-col items-center justify-center px-4 py-16 sm:py-20 overflow-hidden bg-base-alt"
     >
       <div className="pointer-events-none absolute -z-10 top-0 left-1/4 w-[28rem] h-[28rem] rounded-full bg-teal-500/10 blur-3xl" />
       <div className="pointer-events-none absolute -z-10 bottom-0 right-1/4 w-[24rem] h-[24rem] rounded-full bg-emerald-500/10 blur-3xl" />
