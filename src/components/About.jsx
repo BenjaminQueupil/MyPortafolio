@@ -35,13 +35,12 @@ export default function About() {
         Sobre mí
       </motion.h2>
 
-      <div className="grid gap-10 md:grid-cols-2 md:gap-14 max-w-5xl w-full items-start">
-        <motion.div
+      <motion.div
           variants={list}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 max-w-2xl w-full text-center"
         >
           <motion.p variants={fadeUp} className="text-xl sm:text-2xl font-light leading-snug text-neutral-200">
             Soy <span className="font-semibold text-emerald-400">Desarrollador Full Stack</span>{" "}
@@ -75,16 +74,6 @@ export default function About() {
             ))}
           </motion.div>
         </motion.div>
-
-        <motion.ul
-          variants={list}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col gap-3"
-        >
-        </motion.ul>
-      </div>
     </section>
   );
 }
