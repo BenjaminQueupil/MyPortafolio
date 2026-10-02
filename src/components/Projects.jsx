@@ -3,11 +3,12 @@ import {
   FaGithub,
   FaExternalLinkAlt,
   FaCode,
-  FaWindowMaximize,
   FaLock,
 } from "react-icons/fa";
 import TechIcons from "./TechIcons";
 import imgNoagh from "../assets/projects/noagh.jpg";
+import imgVentanas from "../assets/projects/ventanas.jpg";
+import fotoPerfil from "../assets/foto-perfil.jpg";
 
 const personalProjects = [
   {
@@ -15,14 +16,15 @@ const personalProjects = [
     status: "En desarrollo",
     description:
       "Landing page para una empresa de fabricación de ventanas: presentación de la empresa, sus productos y contacto para cotizaciones.",
-    tags: ["React", "Tailwind", "Framer Motion"],
-    image: null,
-    fallbackIcon: FaWindowMaximize,
+    tags: ["React", "Bootstrap", "Framer Motion"],
+    image: imgVentanas,
+    imageFit: "contain",
     github: "",
-    demo: "",
+    demo: "https://ventanas-tecnicas.vercel.app",
   },
   {
     title: "Noagh Barber",
+    status: "En desarrollo",
     description:
       "Sitio web para una barbería con reserva de horas online: el cliente elige servicio, barbero y horario, y el local administra su agenda, clientes y servicios desde un panel propio.",
     tags: ["React", "Tailwind", "Supabase", "Vercel"],
@@ -36,6 +38,7 @@ const personalProjects = [
       "Mi sitio personal para presentar mi experiencia, proyectos y habilidades, con animaciones interactivas y tema claro/oscuro.",
     tags: ["React", "Tailwind", "Framer Motion"],
     image: null,
+    preview: PortfolioPreview,
     github: "https://github.com/BenjaminQueupil/MyPortafolio",
     demo: "https://benjamin-queupil.vercel.app",
   },
@@ -78,14 +81,48 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+function PortfolioPreview() {
+  return (
+    <div className="w-full h-full flex flex-col bg-neutral-950 transition-transform duration-500 group-hover:scale-110">
+      <div className="flex items-center gap-1.5 px-3 py-2 bg-white/5 border-b border-white/10">
+        <span className="w-2 h-2 rounded-full bg-red-400/80" />
+        <span className="w-2 h-2 rounded-full bg-yellow-400/80" />
+        <span className="w-2 h-2 rounded-full bg-green-400/80" />
+        <span className="ml-2 flex-1 truncate rounded-full bg-white/5 px-3 py-0.5 text-[10px] text-neutral-400">
+          benjamin-queupil.vercel.app
+        </span>
+      </div>
+      <div className="relative flex-1 flex flex-col items-center justify-center gap-1 overflow-hidden">
+        <div className="absolute w-40 h-40 rounded-full bg-emerald-500/20 blur-2xl" />
+        <div className="photo-frame relative p-[2px] rounded-lg w-11 h-13">
+          <img src={fotoPerfil} alt="" className="w-full h-full object-cover object-[center_30%] rounded-[6px]" />
+        </div>
+        <span className="relative text-[9px] text-neutral-400 mt-1">Hola yo soy</span>
+        <span className="relative text-lg sm:text-xl font-extrabold leading-none bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+          Benjamin Queupil
+        </span>
+        <div className="relative flex gap-1.5 mt-2">
+          <span className="h-3.5 w-14 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400" />
+          <span className="h-3.5 w-14 rounded-full border border-white/20" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ProjectImage({ project }) {
   const FallbackIcon = project.fallbackIcon || FaCode;
-  const content = project.image ? (
+  const Preview = project.preview;
+  const content = Preview ? (
+    <Preview />
+  ) : project.image ? (
     <img
       src={project.image}
       alt={project.title}
       loading="lazy"
-      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${
+        project.imageFit === "contain" ? "object-contain bg-white p-3" : "object-cover"
+      }`}
     />
   ) : (
     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-emerald-500/30 via-cyan-500/20 to-cyan-600/30 transition-transform duration-500 group-hover:scale-110">
