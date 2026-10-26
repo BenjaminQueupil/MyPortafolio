@@ -13,14 +13,13 @@ import fotoPerfil from "../assets/foto-perfil.jpg";
 const personalProjects = [
   {
     title: "Ventanas Técnicas",
-    status: "En desarrollo",
     description:
-      "Landing page para una empresa de fabricación de ventanas: presentación de la empresa, sus productos y contacto para cotizaciones.",
+      "Sitio web para una empresa que fabrica e instala ventanas: sus productos, obras realizadas y cotización directa por WhatsApp.",
     tags: ["React", "Bootstrap", "Framer Motion"],
     image: imgVentanas,
     imageFit: "contain",
     github: "",
-    demo: "https://ventanas-tecnicas.vercel.app",
+    demo: "https://www.ventanastecnicas.cl",
   },
   {
     title: "Noagh Barber",
@@ -98,7 +97,7 @@ function PortfolioPreview() {
           <img src={fotoPerfil} alt="" className="w-full h-full object-cover object-[center_30%] rounded-[6px]" />
         </div>
         <span className="relative text-[9px] text-neutral-400 mt-1">Hola yo soy</span>
-        <span className="relative text-lg sm:text-xl font-extrabold leading-none bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+        <span className="relative text-lg sm:text-xl font-extrabold leading-none text-white">
           Benjamin Queupil
         </span>
         <div className="relative flex gap-1.5 mt-2">
@@ -230,7 +229,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-neutral-300 hover:text-cyan-300 transition-colors"
                   >
-                    <FaExternalLinkAlt /> Demo
+                    <FaExternalLinkAlt /> {p.status ? "Demo" : "Ver sitio"}
                   </a>
                 )}
               </div>

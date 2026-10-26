@@ -4,16 +4,13 @@ import { scrollToSection } from "../scrollToSection";
 
 const NAME = "Benjamin Queupil";
 
-function letterColor(i, total) {
-  const hue = 160 + (i / (total - 1)) * 90;
-  return {
-    color: `hsl(${hue} 85% var(--name-lightness))`,
-    textShadow: `0 1px 0 hsl(${hue} 70% 35%), 0 2px 0 hsl(${hue} 70% 28%), 0 3px 0 hsl(${hue} 70% 22%), 0 8px 16px var(--name-glow)`,
-  };
-}
+const letterStyle = {
+  color: "var(--color-white)",
+  textShadow:
+    "0 1px 0 var(--name-depth-1), 0 2px 0 var(--name-depth-2), 0 3px 0 var(--name-depth-3), 0 8px 16px var(--name-glow)",
+};
 
 function Name3D() {
-  const letters = NAME.replace(" ", "").length;
   let index = 0;
 
   return (
@@ -26,7 +23,7 @@ function Name3D() {
               <motion.span
                 key={i}
                 className="inline-block cursor-default"
-                style={letterColor(i, letters)}
+                style={letterStyle}
                 initial={{ opacity: 0, rotateX: -90, y: 20 }}
                 animate={{ opacity: 1, rotateX: 0, y: 0 }}
                 transition={{ delay: 0.4 + i * 0.05, type: "spring", stiffness: 200, damping: 12 }}
